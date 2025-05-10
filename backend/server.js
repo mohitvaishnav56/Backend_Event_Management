@@ -17,14 +17,11 @@ db.connectDB();
 app.use(cors());
 app.use(express.json());
 
-// Test route
-app.get('/', (_req, res) => {
-    res.send('Hello, World!');
-});
 
 // User routes
 app.use('/auth/', userRoutes);
 
+// Event routes
 app.use('/api/events', eventRoutes);
 
 // Booking routes
